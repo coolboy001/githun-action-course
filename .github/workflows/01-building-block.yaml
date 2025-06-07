@@ -2,7 +2,6 @@ name: first workflow
 
 on: push
 
-
 jobs:
   echo-hello:
     runs-on: ubunntu-lstest
@@ -13,10 +12,10 @@ jobs:
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: failed steps
+      - name: successful steps
         run: |
           echo "I will fail"
-          exit 1
+          exit 0
       - name: Good Bye
         run: echo "GoodBye"
 # jobs run by default parllel
